@@ -9,7 +9,7 @@ let xAttempts = 1;
 //eventos
 btnTry.addEventListener("click", handleTryClick);
 btnReset.addEventListener("click", handleResetClick);
-document.addEventListener("keydown");
+document.addEventListener("keydown", enterReset);
 
 //funções callback
 function handleTryClick(event) {
@@ -18,7 +18,9 @@ function handleTryClick(event) {
 
   if (Number(inputNumber.value) < 1 || Number(inputNumber.value) > 10) {
     alert("Número inválido");
-  } else if (Number(inputNumber.value) == randomNumber) {
+  }
+
+  if (Number(inputNumber.value) == randomNumber) {
     toggleScreen();
     screen2.querySelector(
       "h2"
