@@ -23,8 +23,8 @@ function handleTryClick(event) {
     screen2.querySelector(
       "h2"
     ).innerText = `Você acertou em ${xAttempts} tentativas.`;
-    xAttempts++; 
   }
+  xAttempts++;
   inputNumber.value = "";
 }
 
