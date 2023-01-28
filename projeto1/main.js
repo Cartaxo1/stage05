@@ -16,18 +16,16 @@ function handleTryClick(event) {
   event.preventDefault();
   const inputNumber = document.querySelector("#inputNumber");
 
-  if (inputNumber.value < 1 || inputNumber.value > 10) {
+  if (Number(inputNumber.value) < 1 || Number(inputNumber.value) > 10) {
     alert("Número inválido");
-  }
-
-  if (Number(inputNumber.value) == randomNumber) {
+  } else if (Number(inputNumber.value) == randomNumber) {
     toggleScreen();
     screen2.querySelector(
       "h2"
     ).innerText = `Você acertou em ${xAttempts} tentativas.`;
+    xAttempts++; 
   }
   inputNumber.value = "";
-  xAttempts++;
 }
 
 function handleResetClick() {
