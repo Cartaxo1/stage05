@@ -147,6 +147,12 @@ form button:hover {
 
 /* alert-error */
 
+.alert-error.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 .alert-error {
     background-color: var(--bg-error);
     position: absolute;
@@ -157,4 +163,8 @@ form button:hover {
     color: var(--tt-error);
     padding: .8rem 0;
     font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+    transition: transform .5s;
 }
